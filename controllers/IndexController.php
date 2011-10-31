@@ -91,7 +91,7 @@ class Faq_IndexController extends Tri_Controller_Action
             }
 
             $this->_helper->_flashMessenger->addMessage('Success');
-            $this->_redirect('faq/index/form/id/'.$id);
+            $this->_redirect('faq/index/index/id/'.$id);
         }
 
         $this->_helper->_flashMessenger->addMessage('Error');

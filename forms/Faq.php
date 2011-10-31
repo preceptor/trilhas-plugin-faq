@@ -49,7 +49,8 @@ class Faq_Form_Faq extends Zend_Form
         $question->setLabel('Question')
                  ->addValidators($validators['question'])
                  ->addFilters($filters['question'])
-                 ->setAttrib('rows', 10)
+                 ->setAttrib('rows', 8)
+               ->setAttrib('class', 'xxlarge')
                  ->setAllowEmpty(false);
 
         $filters['answer'][] = 'StripTags';
@@ -57,12 +58,13 @@ class Faq_Form_Faq extends Zend_Form
         $answer->setLabel('Answer')
                ->addValidators($validators['answer'])
                ->addFilters($filters['answer'])
-               ->setAttrib('rows', 15)
+               ->setAttrib('rows', 8)
+               ->setAttrib('class', 'xxlarge')
                ->setAllowEmpty(false);
 
         $this->addElement($id)
              ->addElement($question)
              ->addElement($answer)
-             ->addElement('submit', 'Save');
+             ->addElement('submit', 'Save', array('class' => 'btn primary'));
    }
 }
